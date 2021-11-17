@@ -1,24 +1,11 @@
 import React from 'react';
 import './App.css';
-import { Tabs, TabList, TabPanels, Tab, TabPanel } from "@chakra-ui/react";
+import QBDT from './components/qbdt';
 
 function App() {
   return (
     <div className="App">
-      <Tabs isFitted variant="enclosed">
-        <TabList mb="1em">
-          <Tab>One</Tab>
-          <Tab>Two</Tab>
-        </TabList>
-        <TabPanels>
-          <TabPanel>
-            <p>one!</p>
-          </TabPanel>
-          <TabPanel>
-            <p>two!</p>
-          </TabPanel>
-        </TabPanels>
-      </Tabs>
+      <QBDT />
     </div>
   );
 }
