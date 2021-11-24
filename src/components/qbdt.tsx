@@ -1,7 +1,10 @@
 import * as React from 'react';
-import { Button, ButtonGroup, FormControl, InputLabel, MenuItem, Select, TextField } from '@mui/material';
+import { Button, ButtonGroup, FormControl, InputLabel, MenuItem, responsiveFontSizes, Select, TextField } from '@mui/material';
 import { Environment } from '../chromeServices/environmentHandler';
 import { useEnvironment } from '../hooks/useEnvironment';
+import { useDispatch, useSelector } from 'react-redux';
+import { RootState } from '../state/store';
+import { setEnvironment } from '../state/environmentSlice';
 
 enum QBDTEndpoints {
   PAY='pay',
@@ -37,7 +40,8 @@ function switchEnv(env: Environment) {
 
 export default function QBDT() {
   const [organizationId, setOrganizationId] = React.useState('4620816365200440940');
-  const environment = useEnvironment();
+  const environment = useSelector((state: RootState) => state.environment.value);
+  const dispatch = useDispatch();
 
   return (
     <>
@@ -66,7 +70,9 @@ export default function QBDT() {
           value={environment}
           label="Age"
           onChange={event => {
-            switchEnv(event.target.value as Environment)
+            const env = event.target.value as Environment
+            switchEnv(env)
+            dispatch(setEnvironment(env));
           }}
         >
           <MenuItem value={'Alpha'}>Alpha</MenuItem>

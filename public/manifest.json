@@ -13,7 +13,12 @@
     "128": "logo192.png"
   },
   "permissions": [
-    "tabs",
-    "scripting"
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+        "matches": ["http://*/*", "https://*/*"],
+        "js": ["./static/js/content.js"]
+    }
   ]
 }
