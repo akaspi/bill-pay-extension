@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Button, ButtonGroup, FormControl, InputLabel, MenuItem, Select, TextField } from '@mui/material';
-import { Environment } from '../chromeServices/environmentHandler';
+import { Environment } from '../chromeServices/actions/environmentHandler';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../state/store';
 import { setEnvironment } from '../state/environmentSlice';
