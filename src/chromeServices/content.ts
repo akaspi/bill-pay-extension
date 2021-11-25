@@ -1,4 +1,4 @@
 import { waitForMelio } from './quickbooks/waitForMelio';
-import { register } from "./actions/actionsHandler";
+import { registerReceive } from './messages/receiveMessages';
 
-waitForMelio(() => register());
+waitForMelio(() => registerReceive());

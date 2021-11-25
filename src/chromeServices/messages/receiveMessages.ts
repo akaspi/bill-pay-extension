@@ -1,7 +1,7 @@
-import { switchEnvironment } from "./environmentHandler";
-import { reloadMelioIframe } from "./reloadMelioIframeHandler";
+import { switchEnvironment } from "../actions/environmentHandler";
+import { reloadMelioIframe } from "../actions/reloadMelioIframeHandler";
 
-export function register() {
+export function registerReceive() {
     chrome.runtime.onMessage.addListener(
         function(request, sender, sendResponse) {
           console.log(sender.tab ?
