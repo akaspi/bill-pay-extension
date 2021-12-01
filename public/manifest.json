@@ -20,6 +20,10 @@
     {
         "matches": ["http://*/*", "https://*/*"],
         "js": ["./static/js/content.js"]
+    },
+    {
+      "matches": ["https://github.com/melio/*/pull/*"],
+      "js": ["./static/js/githubPRContentScript.js"]
     }
   ]
 }
