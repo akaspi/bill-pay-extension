@@ -1,9 +1,3 @@
-console.log('melioGithubContentScript loaded');
-const last = require('lodash/last');
-const takeRight = require('lodash/takeRight');
-const head = require('lodash/head');
-
-
 function getBranchName() {
     const branchesLinksContainer = document.querySelector('.rgh-conversation-activity-filter');
 
