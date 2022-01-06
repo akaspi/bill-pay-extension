@@ -18,8 +18,8 @@
   ],
   "content_scripts": [
     {
-        "matches": ["http://*/*", "https://*/*"],
-        "js": ["./static/js/content.js"]
+        "matches": ["https://*.intuit.com/app/*"],
+        "js": ["./static/js/qboContentScript.js"]
     },
     {
       "matches": ["https://github.com/melio/*/pull/*"],

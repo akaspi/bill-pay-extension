@@ -1,7 +1,6 @@
 export function fetchCompanyInfo(): Promise<string> {
     return new Promise(resolve => {
         const onCompanyInfoReceived = (details :chrome.webRequest.WebResponseCacheDetails) => {
-            console.log('onCompanyInfoReceived', details);
             chrome.webRequest.onCompleted.removeListener(onCompanyInfoReceived);
             resolve('details111');
         }

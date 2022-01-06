@@ -1,4 +1,4 @@
-export function waitForMelio(callback: () => void) {
+export function waitForMelioInQB(callback: () => void) {
     // Options for the observer (which mutations to observe)
     const config = { childList: true };
 

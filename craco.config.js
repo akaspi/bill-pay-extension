@@ -5,8 +5,8 @@ module.exports = {
                 ...webpackConfig,
                 entry: {
                     main: [env === 'development' && require.resolve('react-dev-utils/webpackHotDevClient'),paths.appIndexJs].filter(Boolean),
-                    content: './src/chromeServices/content.ts',
-                    melioGithubContentScript: './src/chromeServices/content/githubPRContentScript.ts'
+                    qboContentScript: './src/chromeServices/content/qboContentScript.ts',
+                    githubPRContentScript: './src/chromeServices/content/githubPRContentScript.ts',
                 },
                 output: {
                     ...webpackConfig.output,

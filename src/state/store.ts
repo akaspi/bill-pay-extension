@@ -3,7 +3,7 @@ import environmentReducer from './environmentSlice';
 
 const reducer = combineReducers({
     environment: environmentReducer,
-  })
+})
 
 const store = configureStore({ reducer });
 
